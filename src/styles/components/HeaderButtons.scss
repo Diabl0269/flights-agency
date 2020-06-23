@@ -1,0 +1,10 @@
+#headerButtonContainer {
+  button {
+    color: $off-white;
+    margin: 0.5vw;
+    &:hover {
+      background: $off-white;
+      color: $blue;
+    }
+  }
+}

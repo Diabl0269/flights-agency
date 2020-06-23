@@ -1,0 +1,48 @@
+#footerContainer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: $off-white;
+
+  #upperFooter {
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1vw;
+
+    #footerDataColumnsContainer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    #footerLogo {
+      align-self: center;
+      padding-top: 1vw;
+      width: 5vw;
+    }
+  }
+
+  #footerColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #footerLink {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #bottomFooter {
+    padding: 0.5vw;
+
+    #copyrights {
+    }
+
+    #fotterButtons {
+    }
+    background-color: $dark-grey;
+  }
+}
