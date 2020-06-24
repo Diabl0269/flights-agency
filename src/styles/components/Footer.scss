@@ -11,7 +11,7 @@
     flex-direction: column;
     padding-bottom: 1vw;
 
-    #footerDataColumnsContainer{
+    #footerDataColumnsContainer {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -36,12 +36,25 @@
   }
 
   #bottomFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 0.5vw;
 
     #copyrights {
+      padding-right: 2vw;
     }
 
-    #fotterButtons {
+    #footerButtons {
+      padding-left: 2vw;
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+        margin: 0.1vw;
+        width: 3vw;
+      }
     }
     background-color: $dark-grey;
   }

@@ -1,0 +1,19 @@
+vacation package: {
+    hotel name,
+    score (1 - 5),
+    price,
+    withBreakfast,
+    withLodging,
+    departure,
+    arrival
+}
+
+[
+    hotelName:
+    score:
+    price:
+    departure:
+    arrival:
+    withBreakfast:
+    withLodging:
+]

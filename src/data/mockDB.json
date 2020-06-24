@@ -1,0 +1,90 @@
+[
+  {
+    "hotelName": "Very Nice Hotel",
+    "score": "5",
+    "price": "5000",
+    "departure": "23/03",
+    "departureTime": "14:10",
+    "return": "30/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Original Name Hotel",
+    "score": "4",
+    "price": "8000",
+    "departure": "25/04",
+    "departureTime": "14:10",
+    "return": "22/05",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": false
+  },
+  {
+    "hotelName": "Not Original Name Hotel",
+    "score": "3",
+    "price": "6500",
+    "departure": "30/06",
+    "departureTime": "14:10",
+    "return": "27/07",
+    "returnTime": "11:15",
+    "withBreakfast": false,
+    "withLodging": false
+  },
+  {
+    "hotelName": "Caramel Hotel",
+    "score": "4",
+    "price": "7000",
+    "departure": "01/07",
+    "departureTime": "14:10",
+    "return": "14/07",
+    "returnTime": "11:15",
+    "withBreakfast": false,
+    "withLodging": false
+  },
+  {
+    "hotelName": "Chips Hotel",
+    "score": "5",
+    "price": "9000",
+    "departure": "12/06",
+    "departureTime": "14:10",
+    "return": "20/06",
+    "returnTime": "11:15",
+    "withBreakfast": false,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Awesome Hotel",
+    "score": "5",
+    "price": "10000",
+    "departure": "16/03",
+    "departureTime": "14:10",
+    "return": "28/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Average Hotel",
+    "score": "2",
+    "price": "3000",
+    "departureDate": "14/08",
+    "departureTime": "14:10",
+    "returnDate": "20/08",
+    "returnTime": "11:15",
+    "withBreakfast": false,
+    "withLodging": true
+  },
+  {
+    "hotelName": "The Best Hotel",
+    "score": "1",
+    "price": "12000",
+    "departureDate": "01/08",
+    "departureTime": "00:00",
+    "returnDate": "01/10",
+    "returnTime": "12:00",
+    "withBreakfast": false,
+    "withLodging": true
+  }
+]

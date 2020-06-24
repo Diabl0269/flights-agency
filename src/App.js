@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Filters from './components/Filters';
+import Footer from './components/base/Footer/Footer'
+import Header from './components/Header/Header'
+import MobileHeader from './components/base/mobile/Header'
+import Records from './components/Records'
+import Sorting from './components/Sorting'
+import isMobile from './utils/isMobile'
+import { RecordsProvider } from './context/RecordsProvider'
 
-function App() {
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="appContainer">
+      {isMobile() ? <MobileHeader /> : <Header />}
+      <RecordsProvider>
+        <Filters />
+        <div>
+          <Sorting />
+          <Records />
+        </div>
+      </RecordsProvider>
+      <Footer />
     </div>
-  );
+  )
 }
-
-export default App;
