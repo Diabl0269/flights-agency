@@ -1,10 +1,10 @@
 #headerContainer {
+  @include flex-row;
   align-items: center;
-  background: $blue;
-  display: flex;
-  flex-direction: row;
+  background: $main-background-color;
   height: 10vh;
   justify-content: space-between;
-  padding: 1vw;
+  padding: $s-mp;
+  position: relative;
   width: 100%;
 }

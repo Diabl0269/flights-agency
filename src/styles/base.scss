@@ -3,7 +3,30 @@
 }
 
 //colors
+$azure: #34afe3;
 $off-white: #fbf7f5;
-$blue: #3F51B5;
+$off-grey: #e3e1e1;
+$blue: #3f51b5;
 $light-grey: #525050;
 $dark-grey: #3b3b3b;
+
+$main-background-color: $blue;
+
+//variables
+$xs-mp: 0.1vw;
+$s-mp: 1vw;
+
+$border-radius: 0.2vw;
+
+$filters-width: 18vw;
+
+//mixins
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

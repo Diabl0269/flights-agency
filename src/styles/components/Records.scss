@@ -1,0 +1,96 @@
+#recordsContainer {
+  margin: $s-mp;
+
+  #divider {
+    margin: $xs-mp $s-mp;
+  }
+
+  #titleContainer {
+    color: $azure;
+  }
+
+  #listContainer {
+    #listItemContainer {
+      @include flex-row;
+      margin: $s-mp 0;
+
+      img {
+        margin-left: $s-mp;
+        width: 7vw;
+        border-radius: $border-radius;
+      }
+
+      #mainDataContainer {
+        @include flex-row;
+        justify-content: space-between;
+        width: 25vw;
+        padding: $s-mp;
+        border: solid 1px $light-grey;
+
+        #mainData {
+          #hotelName {
+            color: $azure;
+          }
+
+          #ratingContainer {
+            margin: 0.5vw 0;
+          }
+
+          #travelTimeContainer {
+            @include flex-row;
+            color: $light-grey;
+            #title {
+              margin-left: $xs-mp;
+              font-weight: bold;
+            }
+          }
+
+          #nightsAndAccommodationContainer {
+            @include flex-row;
+            color: $light-grey;
+            * {
+              font-weight: bold;
+            }
+          }
+        }
+
+        #morePackagesButtonContainer {
+          @include flex-column;
+          justify-content: flex-end;
+          button {
+            background-color: $azure;
+            color: $off-white;
+          }
+        }
+      }
+
+      #additionalDataContainer {
+        @include flex-column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        padding: $s-mp;
+        border: solid 1px $light-grey;
+        margin-right: $s-mp;
+        color: $azure;
+        background-color: $off-grey;
+        width: 8vw;
+
+        #priceContainer{
+            font-size: 2vw;
+        }
+
+        #priceDescriptionContainer{
+            word-wrap: break-word;
+            word-break: keep-all;
+
+        }
+
+        button {
+            background-color: red;
+            color: $off-white;
+        }
+      }
+    }
+  }
+}

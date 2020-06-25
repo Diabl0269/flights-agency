@@ -1,43 +1,45 @@
 #footerContainer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   color: $off-white;
 
   #upperFooter {
+    @include flex-column;
     background-color: $light-grey;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1vw;
-
-    #footerDataColumnsContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
+    padding: $s-mp;
 
     #footerLogo {
       align-self: center;
-      padding-top: 1vw;
-      width: 5vw;
+      width: 7vw;
     }
-  }
 
-  #footerColumn {
-    display: flex;
-    flex-direction: column;
-  }
+    #footerDataColumnsContainer {
+      @include flex-row;
+      justify-content: space-evenly;
 
-  #footerLink {
-    &:hover {
-      cursor: pointer;
+      #footerColumnTitle {
+        font-weight: 900;
+        font-size: 1.3vw;
+      }
+
+      #footerLink {
+        font-size: 0.9vw;
+        font-weight: 200;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    #footerColumn {
+      @include flex-column;
     }
   }
 
   #bottomFooter {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: space-between;
     align-items: center;
     padding: 0.5vw;
@@ -52,7 +54,7 @@
         &:hover {
           cursor: pointer;
         }
-        margin: 0.1vw;
+        margin: $xs-mp;
         width: 3vw;
       }
     }

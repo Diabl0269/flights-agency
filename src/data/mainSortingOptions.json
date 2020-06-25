@@ -1,0 +1,5 @@
+[
+  { "value": { "category": "price", "order": "asec" }, "text": "cheapest" },
+  { "value": { "category": "rating", "order": "desc" }, "text": "mostPopular" },
+  { "value": { "category": "mostLucrative" }, "text": "mostLucrative" }
+]

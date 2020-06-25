@@ -1,4 +1,22 @@
 {
-  "SORT_BY_DEFAULT": "cheapest",
-  "SORT_BY_ORDER_DEFAULT": "asec"
+  "MAX_RATINGS": 5,
+  "DEFAULT_RECORDS_DATA": {
+    "priceEdges": [],
+    "records": []
+  },
+  "DEFAULT_QUERY_OBJ": {
+    "ratings": [1, 2, 3, 4, 5],
+    "priceEdges": [0, 99999],
+    "sortBy": {
+      "category": "price",
+      "order": "asec"
+    },
+    "queryWithBreakfast": false,
+    "queryWithLodging": false,
+    "queryHotelName": ""
+  },
+  "SORT_BY_DEFAULT": {
+    "category": "price",
+    "order": "asec"
+  }
 }

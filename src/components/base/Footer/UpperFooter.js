@@ -10,18 +10,20 @@ export default () => {
     <div id="upperFooter">
       <img alt={d('plane')} src={logo} id="footerLogo" />
       <div id="footerDataColumnsContainer">
-        {footerColumns.map((column, colndex) => (
-          <Typography key={text} id="footerColumn">
+        {footerColumns.map((column, colIndex) => (
+          <div key={colIndex} id="footerColumn">
             {column.map((text, index) =>
               index === 0 ? (
-                <h4 key={text}>{text}</h4>
-              ) : (
-                <div key={text} onClick={() => pageAlert(text)} id="footerLink">
+                <Typography id="footerColumnTitle" key={text}>
                   {text}
-                </div>
+                </Typography>
+              ) : (
+                <Typography key={text} onClick={() => pageAlert(text)} id="footerLink">
+                  {text}
+                </Typography>
               )
             )}
-          </Typography>
+          </div>
         ))}
       </div>
     </div>

@@ -1,9 +1,8 @@
 #siteLogoContainer {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    img {
-    margin: 1vw;
+  @include flex-row;
+  align-items: center;
+  img {
+    margin: $s-mp;
     width: 5vw;
   }
 }

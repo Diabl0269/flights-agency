@@ -1,0 +1,11 @@
+[
+  "ratings",
+  "hotelName",
+  "price",
+  "departure",
+  "departureTime",
+  "arrival",
+  "arrivalTime",
+  "withBreakfast",
+  "withLodging"
+]

@@ -1,0 +1,97 @@
+#filtersContainer {
+  color: $off-white;
+  width: $filters-width;
+  margin: 0;
+  
+  .MuiRadio-colorSecondary {
+    color: $off-white;
+  }
+
+  .MuiDivider-root {
+    background-color: $off-white;
+  }
+
+  #filtersTitleContainer {
+    @include flex-row;
+    background-color: $main-background-color;
+    height: 5vw;
+    padding-right: $s-mp;
+    align-items: center;
+    border-radius: $border-radius;
+    margin-bottom: $xs-mp;
+  }
+
+  #filtersDataContainer {
+    background-color: $main-background-color;
+
+    border-radius: $border-radius;
+
+    #filtersRatingContainer {
+      #filtersRatingTitle {
+        padding: $xs-mp $s-mp 0 0;
+      }
+
+      #ratingsContainer {
+        #ratingContainer {
+          @include flex-row;
+          align-items: center;
+          justify-content: space-evenly;
+          padding-left: $xs-mp;
+          #radioButton {
+          }
+        }
+      }
+    }
+  }
+
+  #priceRangeContainer {
+    #priceRangeTitle {
+      padding-right: $s-mp;
+    }
+    #sliderContainer {
+      padding: 0 $s-mp;
+      .MuiSlider-root {
+        color: $off-white;
+      }
+      .PrivateValueLabel-circle-11 {
+        color: $light-grey;
+      }
+    }
+  }
+
+  #filtersBaseHostingContainer {
+    #baseHostingTitle {
+      padding-right: $s-mp;
+    }
+    #hostingOptionsContainer {
+      #hostingOptionContainer {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: $s-mp;
+        #radioButtonWithTitleContainer {
+          @include flex-row;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  #filtersHotelSearchBarContainer {
+    padding: 1vw;
+
+    .MuiFormControl-root {
+      background-color: $off-white;
+    }
+
+    .MuiInputAdornment-root {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    #textField {
+      padding: 1vw;
+      height: 0.5vw;
+    }
+  }
+}

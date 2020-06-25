@@ -1,0 +1,26 @@
+#sortingContainer {
+  @include flex-row;
+  align-items: center;
+  
+  .MuiSelect-root{
+    width: 10vw;
+  }
+
+  .chosen {
+    background-color: $main-background-color;
+    * {
+      color: $off-white;
+    }
+  }
+
+  #buttonsContainer {
+    button {
+    margin: 0 $s-mp;
+    color: $light-grey;
+    }
+  }
+
+  .MuiDivider-root {
+    margin: 0 $s-mp;
+  }
+}
