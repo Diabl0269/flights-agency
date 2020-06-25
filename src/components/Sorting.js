@@ -23,30 +23,34 @@ export default () => {
     const {
       target: { value }
     } = e
-    setSecondarySortingOption(value)
-    alterQueryObj({ change: value, category: 'sortBy' })
+    setMainSorting('')
+    const parsedValue = JSON.parse(value) 
+    setSecondarySortingOption(parsedValue)
+    alterQueryObj({ change: parsedValue, category: 'sortBy' })
   }
 
   return (
     <div id="sortingContainer">
       <div id="buttonsContainer">
-        {mainSortingOptions.map(({ text, value }) => (
-          <Button
-            key={text}
-            onClick={() => buttonHandler({ value, text })}
-            className={classNames({ chosen: mainSorting === text })}
-          >
-            <Typography>{d(text)}</Typography>
-          </Button>
-        ))}
+        {mainSortingOptions.map(({ text, value }) => {
+          return (
+            <Button
+              key={text}
+              onClick={() => buttonHandler({ value, text })}
+              className={classNames({ chosen: mainSorting === text })}
+            >
+              <Typography>{d(text)}</Typography>
+            </Button>
+          )
+        })}
       </div>
 
       <Divider orientation="vertical" flexItem id="divider" />
 
       <Typography>{`${d('orderBy')}: `}</Typography>
-      <Select value={secondarySortingOption} onChange={changeHandler} native={true}>
+      <Select onChange={changeHandler} native={true}>
         {secondarySortingOptions.map(({ value, text }) => (
-          <option value={value} key={text}>
+          <option value={JSON.stringify(value)} key={text}>
             {text}
           </option>
         ))}
