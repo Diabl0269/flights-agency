@@ -2,7 +2,7 @@
   color: $off-white;
   width: $filters-width;
   margin: 0;
-  
+
   .MuiRadio-colorSecondary {
     color: $off-white;
   }
@@ -48,16 +48,20 @@
     #priceRangeTitle {
       padding-right: $s-mp;
     }
+
+    #edgeValuesContainer {
+      @include flex-row;
+      justify-content: space-between;
+      margin-top: $xs-mp;
+    }
+
     #sliderContainer {
       padding: 0 $s-mp;
       .MuiSlider-root {
         color: $off-white;
       }
-      .MuiSlider-thumb{
+      .MuiSlider-thumb {
         color: $light-grey;
-
-      }
-      .PrivateValueLabel-circle-11 {
       }
     }
   }
