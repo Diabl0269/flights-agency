@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import d from '../../data/dictionary'
 import { useRecords } from '../../context/RecordsProvider'
 import { Typography, Slider } from '@material-ui/core'
@@ -8,7 +8,6 @@ export default () => {
   const {
     recordsData: { priceEdges },
     alterQueryObj,
-    queryObj: { priceEdges: queryPriceEdges }
   } = useRecords()
 
   const [showAlert, setShowAlert] = useState(false)
