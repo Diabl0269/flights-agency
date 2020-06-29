@@ -15,13 +15,22 @@ export default ({ record }) => {
     returnTime,
     hotelName,
     rating,
-    price
+    price,
+    withLodging,
+    withBreakfast
   } = record
 
   const numOfNights = calculateNumOfNights(departureDate, returnDate)
 
   const displayPrice = numWithCommas(price)
 
+  const commoditiesText = withLodging
+    ? withBreakfast
+      ? 'allIncluded'
+      : 'onlyRoom'
+    : 'onlyBreakfast'
+
+  console.log(commoditiesText)
   const TravelTimeContainer = ({ date, time, text }) => (
     <div id="travelTimeContainer">
       <Typography id="title">{`${d(text)}:`}</Typography>
@@ -47,7 +56,7 @@ export default ({ record }) => {
           <div id="nightsAndAccommodationContainer">
             <Typography>{`${numOfNights} ${d('nights')}`}</Typography>
             <Divider flexItem id="divider" orientation="vertical" />
-            <Typography>{d('onlyRoom')}</Typography>
+            <Typography>{d(commoditiesText)}</Typography>
           </div>
         </div>
 

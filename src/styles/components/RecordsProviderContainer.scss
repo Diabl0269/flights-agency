@@ -1,5 +1,15 @@
-#recordsProviderContainer {
+@mixin basicRecordsProviderContainer {
   justify-content: center;
   padding: 3vw;
+}
+
+#mobileRecordsProviderContainer {
+  @include basicRecordsProviderContainer();
+  @include flex-column;
+  align-items: center;
+}
+
+#recordsProviderContainer {
+  @include basicRecordsProviderContainer();
   @include flex-row;
 }

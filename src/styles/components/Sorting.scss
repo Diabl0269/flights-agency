@@ -1,9 +1,9 @@
-#sortingContainer {
+@mixin basicSortingContainer {
   @include flex-row;
   align-items: center;
-  
-  .MuiSelect-root{
-    width: 10vw;
+
+  .MuiInputBase-root {
+    margin-right: $s-mp;
   }
 
   .chosen {
@@ -15,12 +15,35 @@
 
   #buttonsContainer {
     button {
-    margin: 0 $s-mp;
-    color: $light-grey;
+      margin: 0 $s-mp;
+      color: $light-grey;
     }
+  }
+
+  #selectContainer {
+    @include flex-row;
   }
 
   .MuiDivider-root {
     margin: 0 $s-mp;
+  }
+}
+
+#sortingContainer {
+  @include basicSortingContainer();
+}
+
+#mobileSortingContainer {
+  @include basicSortingContainer();
+  justify-content: center;
+
+  #selectContainer {
+    @include flex-column;
+    align-items: center;
+    @media (max-width: $mobile-breakpoint) {
+      .MuiSelect-root {
+        width: 45vw;
+      }
+    }
   }
 }

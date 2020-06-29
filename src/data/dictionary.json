@@ -39,6 +39,8 @@
   "return": { "he": "חזרה" },
   "nights": { "he": "לילות" },
   "onlyRoom": { "he": "חדר בלבד" },
+  "onlyBreakfast": { "he": "ארוחת בוקר" },
+  "allIncluded": { "he": "הכל כלול" },
   "morePackagesToThisHotel": { "he": "חבילות נוספות למלון זה" },
   "totalFound": { "he": "סה\"כ נמצאו" },
   "moreDetails": { "he": "פרטים נוספים" },

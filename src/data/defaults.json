@@ -11,8 +11,8 @@
       "category": "price",
       "order": "asec"
     },
-    "queryWithBreakfast": false,
-    "queryWithLodging": false,
+    "queryWithBreakfast": true,
+    "queryWithLodging": true,
     "queryHotelName": ""
   },
   "SORT_BY_DEFAULT": {

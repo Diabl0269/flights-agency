@@ -1,12 +1,15 @@
 import React from 'react'
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown'
 import d from '../../data/dictionary'
 import pageAlert from '../../utils/pageAlert'
 import { Button, Typography } from '@material-ui/core'
+import isMobile from '../../utils/isMobile'
 
 export default () => {
+  const containerId = isMobile() ? 'mobileHeaderButtonContainer' : 'headerButtonContainer'
+
   return (
-    <div id="headerButtonContainer">
+    <div id={containerId}>
       <Button onClick={() => pageAlert(d('homePage'))}>
         <Typography>{d('homePage')}</Typography>
       </Button>

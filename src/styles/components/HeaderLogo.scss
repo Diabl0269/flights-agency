@@ -1,8 +1,18 @@
 #siteLogoContainer {
   @include flex-row;
   align-items: center;
+  p{
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 3vw;
+    }
+  }
   img {
     margin: $s-mp;
     width: 5vw;
+    height: 5vw;
+    @media (max-width: $mobile-breakpoint) {
+      width: 12vw;
+      height: 12vw;
+    }
   }
 }

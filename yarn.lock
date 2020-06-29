@@ -9455,6 +9455,11 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+react-css-collapse@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/react-css-collapse/-/react-css-collapse-4.0.6.tgz#9f47ca099d1c752958bd9794e514bbc27a8fc690"
+  integrity sha512-r3kL6PGBH+cpUv1NiNccBh/RKwRYvK8RpWwKkSdC2ieKofdfsdQHOIguZT5WuDPgttC/IRGDkaBRR0bHgPC7tA==
+
 react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -9570,7 +9575,7 @@ react-scripts@3.4.1:
   optionalDependencies:
     fsevents "2.1.2"
 
-react-transition-group@^4.4.0:
+react-transition-group@^4.4.0, react-transition-group@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.1.tgz#63868f9325a38ea5ee9535d828327f85773345c9"
   integrity sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==

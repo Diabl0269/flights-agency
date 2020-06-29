@@ -1,6 +1,5 @@
 #recordsContainer {
   margin: $s-mp;
-
   #divider {
     margin: $xs-mp $s-mp;
   }
@@ -16,14 +15,21 @@
 
       img {
         margin-left: $s-mp;
-        width: 7vw;
-        border-radius: $border-radius;
+        width: 25%;
+        align-self: center;
+        @media (max-width: $tablet-breakpoint) {
+          height: 100%;
+        }
+        border-radius: $s-border-radius;
       }
 
       #mainDataContainer {
         @include flex-row;
+        @media (max-width: $tablet-breakpoint) {
+          @include flex-column;
+        }
         justify-content: space-between;
-        width: 25vw;
+        width: 50%;
         padding: $s-mp;
         border: solid 1px $light-grey;
 
@@ -74,21 +80,23 @@
         margin-right: $s-mp;
         color: $azure;
         background-color: $off-grey;
-        width: 8vw;
+        width: 25%;
 
-        #priceContainer{
-            font-size: 2vw;
+        #priceContainer {
+          font-size: 3vw;
+          @media (max-width: $mobile-breakpoint) {
+            font-size: 5vw;
+          }
         }
 
-        #priceDescriptionContainer{
-            word-wrap: break-word;
-            word-break: keep-all;
-
+        #priceDescriptionContainer {
+          word-wrap: break-word;
+          word-break: keep-all;
         }
 
         button {
-            background-color: red;
-            color: $off-white;
+          background-color: red;
+          color: $off-white;
         }
       }
     }

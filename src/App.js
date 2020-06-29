@@ -8,15 +8,20 @@ import Sorting from './components/Sorting'
 import isMobile from './utils/isMobile'
 import { RecordsProvider } from './context/RecordsProvider'
 import { Container } from '@material-ui/core'
+import MobileFilters from './components/filters/MobileFilters'
 
 export default () => {
+  const recordsProviderClassName = isMobile()
+    ? 'mobileRecordsProviderContainer'
+    : 'recordsProviderContainer'
+
   return (
     <div id="appContainer">
-      {isMobile() ? <MobileHeader /> : <Header />}
       <RecordsProvider>
-        <Container id='recordsProviderContainer'>
-          <Filters />
-          <div>
+        {isMobile() ? <MobileHeader /> : <Header />}
+        <Container id={recordsProviderClassName}>
+          {isMobile() ? <MobileFilters /> : <Filters />}
+          <div id='sortingAndRecordsContainer'>
             <Sorting />
             <Records />
           </div>

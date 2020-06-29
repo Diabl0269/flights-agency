@@ -41,7 +41,7 @@ export default () => {
         {ratingsArray.map((rating, index) => (
           <div key={`${rating}${index}`} id="ratingContainer">
             <RadioButton rating={rating} />
-            <Rating readOnly value={rating} />
+            <Rating readOnly value={rating} id='rating' />
             <LowestPrice />
           </div>
         ))}

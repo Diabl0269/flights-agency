@@ -2,9 +2,16 @@
   @include flex-row;
   align-items: center;
   background: $main-background-color;
-  height: 10vh;
   justify-content: space-between;
   padding: $s-mp;
   position: relative;
   width: 100%;
+  height: 10vh;
+  @media (max-width: $tablet-breakpoint) {
+    height: 12vh;
+    padding: $m-mp;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    height: 14vh;
+  }
 }

@@ -1,4 +1,5 @@
-#headerButtonContainer {
+@mixin basicHeaderProps {
+  color: $off-white;
   button {
     color: $off-white;
     margin: 0.5vw;
@@ -6,5 +7,17 @@
       background: $off-white;
       color: $main-background-color;
     }
+  }
+}
+
+#headerButtonContainer {
+  @include basicHeaderProps();
+}
+
+#mobileHeaderButtonContainer {
+  @include basicHeaderProps();
+  @include flex-column;
+  button {
+    color: $dark-grey;
   }
 }

@@ -1,4 +1,4 @@
-#footerContainer {
+@mixin basicFooterContainer {
   position: relative;
   left: 0;
   bottom: 0;
@@ -12,21 +12,13 @@
 
     #footerLogo {
       align-self: center;
-      width: 7vw;
     }
 
     #footerDataColumnsContainer {
       @include flex-row;
       justify-content: space-evenly;
 
-      #footerColumnTitle {
-        font-weight: 900;
-        font-size: 1.3vw;
-      }
-
       #footerLink {
-        font-size: 0.9vw;
-        font-weight: 200;
         &:hover {
           cursor: pointer;
         }
@@ -44,20 +36,86 @@
     align-items: center;
     padding: 0.5vw;
 
-    #copyrights {
-      padding-right: 2vw;
-    }
-
     #footerButtons {
       padding-left: 2vw;
       img {
+        margin: $xs-mp;
         &:hover {
           cursor: pointer;
         }
-        margin: $xs-mp;
-        width: 3vw;
       }
     }
     background-color: $dark-grey;
+  }
+}
+
+#footerContainer {
+  @include basicFooterContainer();
+
+  #upperFooter {
+    #footerLogo {
+      width: 7vw;
+    }
+
+    #footerDataColumnsContainer {
+      #footerColumnTitle {
+        font-weight: 900;
+        font-size: 1.3vw;
+      }
+
+      #footerLink {
+        font-size: 0.9vw;
+        font-weight: 200;
+      }
+    }
+  }
+
+  #bottomFooter {
+    #copyrights {
+      padding-right: 2vw;
+    }
+  }
+
+  #footerButtons {
+    img {
+      width: 3vw;
+    }
+  }
+}
+
+#mobileFooterContainer {
+  @include basicFooterContainer();
+
+  #upperFooter {
+    #footerLogo {
+      width: 13vw;
+    }
+
+    #footerDataColumnsContainer {
+      text-align: center;
+      
+      #footerColumnTitle {
+        font-weight: 900;
+        font-size: 4.5vw;
+      }
+
+      #footerLink {
+        font-size: 3vw;
+        font-weight: 200;
+      }
+    }
+  }
+
+  #bottomFooter {
+    #copyrights {
+      padding-right: $s-mp;
+      font-size: 4vw;
+    }
+
+    #footerButtons {
+      img {
+        width: 7vw;
+      }
+    }
   }
 }

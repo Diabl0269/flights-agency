@@ -12,15 +12,25 @@ $dark-grey: #3b3b3b;
 
 $main-background-color: $blue;
 
+
 //variables
+$tablet-breakpoint: 1200px;
+$mobile-breakpoint: 700px;
+
 $xs-mp: 0.1vw;
 $s-mp: 1vw;
+$m-mp: 3vw;
 
-$border-radius: 0.2vw;
+$s-border-radius: 0.2vw;
+$m-border-radius: 1vw;
 
-$filters-width: 18vw;
+$filters-width: 20vw;
 
 //mixins
+@mixin tablet-view($property, $value){
+
+}
+
 @mixin flex-row {
   display: flex;
   flex-direction: row;

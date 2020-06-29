@@ -2,7 +2,6 @@ import mockDB from '../data/mockDB.json'
 import calculateNumOfNights from '../utils/calculateNumOfNights'
 
 export default (queryObj) => {
-  console.log(queryObj)
   const {
     ratings,
     priceEdges: [minPrice, maxPrice],
@@ -27,8 +26,8 @@ export default (queryObj) => {
 
     const isUnderMaxPrice = maxPrice ? price <= maxPrice : true
     const doesMatchRating = ratings.length > 0 && ratings.includes(rating)
-    const demandBreakfast = queryWithBreakfast ? withBreakfast : true
-    const demandLodging = queryWithLodging ? withLodging : true
+    const demandBreakfast = queryWithBreakfast ? withBreakfast : withBreakfast ? false : true
+    const demandLodging = queryWithLodging ? withLodging : withLodging ? false : true
     const matchHotelName = hotelName.toLowerCase().includes(queryHotelName.toLowerCase())
 
     return (
@@ -54,7 +53,7 @@ export default (queryObj) => {
     }
 
     const condition = record1[category] > record2[category]
-    
+
     return isAscending ? (condition ? 1 : -1) : condition ? -1 : 1
   })
   return { records, priceEdges: [lowestPrice, highestPrice] }

@@ -1,2 +1,2 @@
-const windowWidth = window.innerWidth
-export default () => windowWidth < 600
+const { innerWidth } = window
+export default () => innerWidth < 1100

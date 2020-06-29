@@ -1,7 +1,5 @@
-#filtersContainer {
+@mixin basicFiltersContainer {
   color: $off-white;
-  width: $filters-width;
-  margin: 0;
 
   .MuiRadio-colorSecondary {
     color: $off-white;
@@ -9,39 +7,6 @@
 
   .MuiDivider-root {
     background-color: $off-white;
-  }
-
-  #filtersTitleContainer {
-    @include flex-row;
-    background-color: $main-background-color;
-    height: 5vw;
-    padding-right: $s-mp;
-    align-items: center;
-    border-radius: $border-radius;
-    margin-bottom: $xs-mp;
-  }
-
-  #filtersDataContainer {
-    background-color: $main-background-color;
-
-    border-radius: $border-radius;
-
-    #filtersRatingContainer {
-      #filtersRatingTitle {
-        padding: $xs-mp $s-mp 0 0;
-      }
-
-      #ratingsContainer {
-        #ratingContainer {
-          @include flex-row;
-          align-items: center;
-          justify-content: space-evenly;
-          padding-left: $xs-mp;
-          #radioButton {
-          }
-        }
-      }
-    }
   }
 
   #priceRangeContainer {
@@ -56,7 +21,6 @@
     }
 
     #sliderContainer {
-      padding: 0 $s-mp;
       .MuiSlider-root {
         color: $off-white;
       }
@@ -65,40 +29,137 @@
       }
     }
   }
+}
 
-  #filtersBaseHostingContainer {
-    #baseHostingTitle {
-      padding-right: $s-mp;
-    }
-    #hostingOptionsContainer {
-      #hostingOptionContainer {
+@mixin basicFiltersTitleContainer {
+  align-items: center;
+  background-color: $main-background-color;
+  height: 5vw;
+}
+
+#filtersBaseHostingContainer {
+  #baseHostingTitle {
+    padding-right: $s-mp;
+  }
+  #hostingOptionsContainer {
+    #hostingOptionContainer {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: $s-mp;
+      #radioButtonWithTitleContainer {
         @include flex-row;
         align-items: center;
-        justify-content: space-between;
-        padding-left: $s-mp;
-        #radioButtonWithTitleContainer {
+      }
+      #lowestPriceText {
+        padding: 0 0.5vw;
+      }
+    }
+  }
+}
+
+#filtersHotelSearchBarContainer {
+  padding: 1vw;
+
+  .MuiInputBase-root {
+    min-height: 30px;
+  }
+
+  .MuiFormControl-root {
+    background-color: $off-white;
+  }
+
+  .MuiInputAdornment-root {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #textField {
+    padding: 1vw;
+  }
+}
+
+@mixin basicFiltersDataContainer {
+  #filtersDataContainer {
+    background-color: $main-background-color;
+    border-radius: $s-border-radius;
+
+    #filtersRatingContainer {
+      #filtersRatingTitle {
+        padding: $xs-mp $s-mp 0 0;
+      }
+
+      #ratingsContainer {
+        #ratingContainer {
           @include flex-row;
           align-items: center;
+          justify-content: space-evenly;
+          padding: 0 0.5vw;
+          #rating {
+          }
         }
       }
     }
   }
+}
 
-  #filtersHotelSearchBarContainer {
-    padding: 1vw;
+#mobileFiltersContainer {
+  @include basicFiltersContainer();
+  @include basicFiltersDataContainer();
+  max-width: 100%;
+  margin-bottom: $m-mp;
 
-    .MuiFormControl-root {
-      background-color: $off-white;
-    }
-
-    .MuiInputAdornment-root {
-      &:hover {
-        cursor: pointer;
+  #rating {
+    .MuiSvgIcon-root {
+      width: 3vw;
+      @media (max-width: $mobile-breakpoint) {
+        width: 4vw;
       }
     }
-    #textField {
-      padding: 1vw;
-      height: 0.5vw;
+  }
+
+  #sliderContainer {
+    padding: 0 $m-mp;
+  }
+
+  #filtersTitleContainer {
+    @include basicFiltersTitleContainer();
+    @include flex-row;
+    margin: $m-mp 0 $s-mp 0;
+    padding: $m-mp;
+    border-radius: $m-border-radius;
+  }
+
+  #filtersDataContainer {
+    background-color: $main-background-color;
+    padding: $s-mp;
+    border-radius: $m-border-radius;
+  }
+}
+
+#filtersContainer {
+  @include basicFiltersContainer();
+  max-width: $filters-width;
+  border-radius: $m-border-radius;
+
+  #rating {
+    .MuiSvgIcon-root {
+      width: 1.5vw;
     }
   }
+
+  #sliderContainer {
+    padding: 0 $s-mp;
+  }
+
+  #filtersTitleContainer {
+    @include basicFiltersTitleContainer();
+    align-items: center;
+    @include flex-row;
+    border-radius: $s-border-radius;
+    margin-bottom: $xs-mp;
+    padding-right: $s-mp;
+  }
+
+  @include basicFiltersDataContainer();
 }
