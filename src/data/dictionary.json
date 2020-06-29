@@ -39,11 +39,16 @@
   "return": { "he": "חזרה" },
   "nights": { "he": "לילות" },
   "onlyRoom": { "he": "חדר בלבד" },
+  "fullName": { "he": "שם מלא" },
+  "joinClub": { "he": "הצטרפו למועדון הלקוחות שלנו" },
+  "email": { "he": "דואר אלקטרוני" },
+  "signUp": { "he": "הרשם" },
   "onlyBreakfast": { "he": "ארוחת בוקר" },
   "allIncluded": { "he": "הכל כלול" },
   "morePackagesToThisHotel": { "he": "חבילות נוספות למלון זה" },
   "totalFound": { "he": "סה\"כ נמצאו" },
   "moreDetails": { "he": "פרטים נוספים" },
   "averagePriceForPersonInDuoRoom": { "he": "מחיר ממוצע לאדם בחדר זוגי" },
-  "mostLucrative": { "he": "הכי משתלם" }
+  "mostLucrative": { "he": "הכי משתלם" },
+  "willSubscribe": { "he": "כפתור זה ירשום אותך למועדון הלקוחות" }
 }

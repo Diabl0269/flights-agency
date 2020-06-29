@@ -1,0 +1,32 @@
+#subscriptionContainer {
+  @include flex-column;
+  padding: $s-mp;
+  align-items: center;
+  color: $azure;
+  background-color: $off-grey;
+
+  p {
+    align-self: center;
+    margin-bottom: $s-mp;
+    padding-right: $s-mp;
+  }
+
+  .MuiFormControl-root {
+    margin: 0 $s-mp;
+    @media (max-width: $mobile-breakpoint) {
+      margin: $s-mp 0;
+    }
+  }
+  #formContainer {
+    @include flex-row;
+    @media (max-width: $mobile-breakpoint) {
+      @include flex-column;
+    }
+    justify-content: space-between;
+
+    button {
+      background-color: red;
+      color: $off-white;
+    }
+  }
+}

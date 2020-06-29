@@ -9,6 +9,7 @@ import isMobile from './utils/isMobile'
 import { RecordsProvider } from './context/RecordsProvider'
 import { Container } from '@material-ui/core'
 import MobileFilters from './components/filters/MobileFilters'
+import Subscription from './components/Subscription'
 
 export default () => {
   const [mobile, setMobile] = useState(isMobile())
@@ -35,6 +36,7 @@ export default () => {
             <Records />
           </div>
         </Container>
+        <Subscription />
         <Footer />
       </RecordsProvider>
     </div>
