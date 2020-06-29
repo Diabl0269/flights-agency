@@ -23,8 +23,8 @@ export default () => {
       <Typography id="priceRangeTitle">{d('priceRangeForPerson')}</Typography>
       <div id="sliderContainer">
         <div id="edgeValuesContainer">
-          <Typography>{priceEdges[1]}</Typography>
-          <Typography>{priceEdges[0]}</Typography>
+          <Typography>{`$${priceEdges[1]}`}</Typography>
+          <Typography>{`$${priceEdges[0]}`}</Typography>
         </div>
         <Slider
           value={value}

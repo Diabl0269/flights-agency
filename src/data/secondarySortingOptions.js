@@ -16,5 +16,6 @@ export default [
   {
     value: { category: 'rating', order: 'desc' },
     text: `${d('rating')}, ${d('fromHighestToLowest')}`
-  }
+  },
+  { value: { category: 'mostLucrative' }, text: d('mostLucrative') }
 ]

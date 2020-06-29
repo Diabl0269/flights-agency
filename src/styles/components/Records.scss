@@ -25,14 +25,14 @@
 
       #mainDataContainer {
         @include flex-row;
-        @media (max-width: $tablet-breakpoint) {
-          @include flex-column;
-        }
         justify-content: space-between;
         width: 50%;
         padding: $s-mp;
         border: solid 1px $light-grey;
-
+        border-radius: .3vw;
+        @media (max-width: $tablet-breakpoint) {
+          @include flex-column;
+        }
         #mainData {
           #hotelName {
             color: $azure;
@@ -81,6 +81,7 @@
         color: $azure;
         background-color: $off-grey;
         width: 25%;
+        border-radius: .3vw;
 
         #priceContainer {
           font-size: 3vw;

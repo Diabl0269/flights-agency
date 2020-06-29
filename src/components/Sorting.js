@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Typography, Select, Button, Divider, MenuItem } from '@material-ui/core'
 import secondarySortingOptions from '../data/secondarySortingOptions'
 import mainSortingOptions from '../data/mainSortingOptions.json'
 import { useRecords } from '../context/RecordsProvider'
 import classNames from 'classnames'
 import d from '../data/dictionary'
-import isMobile from '../utils/isMobile'
 import { isEqual } from 'lodash'
 
 export default () => {
@@ -14,7 +13,7 @@ export default () => {
     secondarySortingOptions[0].value
   )
 
-  const { alterQueryObj } = useRecords()
+  const { alterQueryObj, mobile } = useRecords()
 
   const setSecondaryOptionToMainOption = (value) => {
     const { category, order } = value
@@ -26,6 +25,9 @@ export default () => {
       case 'rating':
         if (order === 'desc') result = 'mostPopular'
         break
+      case 'mostLucrative':
+        result = 'mostLucrative'
+        break
       default:
         break
     }
@@ -34,8 +36,8 @@ export default () => {
 
   const setMainOptionToSecondaryOption = (value) => {
     let result = ''
-    secondarySortingOptions.map(({ value: optionValue }) => {
-      if (isEqual(value, optionValue)) result = optionValue
+    secondarySortingOptions.forEach(({ value: optionValue }) => {
+      if (isEqual(value, optionValue)) return (result = optionValue)
     })
     setSecondarySortingOption(result)
   }
@@ -55,7 +57,12 @@ export default () => {
     alterQueryObj({ change: value, category: 'sortBy' })
   }
 
-  const containerId = isMobile() ? 'mobileSortingContainer' : 'sortingContainer'
+  const containerIdSetter = (mobileCondition) =>
+    mobileCondition ? 'mobileSortingContainer' : 'sortingContainer'
+  const [containerId, setContainerId] = useState(containerIdSetter(mobile))
+  useEffect(() => {
+    setContainerId(containerIdSetter(mobile))
+  }, [mobile])
 
   return (
     <div id={containerId}>
@@ -78,7 +85,6 @@ export default () => {
       <div id="selectContainer">
         <Typography>{`${d('orderBy')}: `}</Typography>
         <Select
-          // autoWidth={true}
           onChange={changeHandler}
           value={secondarySortingOption}
           MenuProps={{

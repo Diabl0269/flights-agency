@@ -45,6 +45,72 @@
   },
   {
     "hotelName": "Very Nice Hotel",
+    "rating": 4,
+    "price": 4000,
+    "departure": "23/03",
+    "departureTime": "14:10",
+    "return": "30/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Very Nice Hotel",
+    "rating": 3,
+    "price": 3000,
+    "departure": "23/03",
+    "departureTime": "14:10",
+    "return": "30/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Very Nice Hotel",
+    "rating": 2,
+    "price": 2000,
+    "departure": "15/03",
+    "departureTime": "14:10",
+    "return": "30/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Very Nice Hotel",
+    "rating": 5,
+    "price": 819,
+    "departure": "1/03",
+    "departureTime": "14:10",
+    "return": "30/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Very Nice Hotel",
+    "rating": 1,
+    "price": 1000,
+    "departure": "23/03",
+    "departureTime": "14:10",
+    "return": "30/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Very Nice Hotel",
+    "rating": 3,
+    "price": 10000,
+    "departure": "23/03",
+    "departureTime": "14:10",
+    "return": "30/03",
+    "returnTime": "11:15",
+    "withBreakfast": true,
+    "withLodging": true
+  },
+  {
+    "hotelName": "Very Nice Hotel",
     "rating": 5,
     "price": 5000,
     "departure": "23/03",

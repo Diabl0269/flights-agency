@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown'
 import d from '../../data/dictionary'
 import pageAlert from '../../utils/pageAlert'
 import { Button, Typography } from '@material-ui/core'
-import isMobile from '../../utils/isMobile'
+import { useRecords } from '../../context/RecordsProvider'
 
 export default () => {
-  const containerId = isMobile() ? 'mobileHeaderButtonContainer' : 'headerButtonContainer'
+  const { mobile } = useRecords()
+  const containerIdSetter = (mobileCondition) =>
+    mobileCondition ? 'mobileHeaderButtonContainer' : 'headerButtonContainer'
+  const [containerId, setContainerId] = useState(containerIdSetter(mobile))
+  useEffect(() => {
+    setContainerId(containerIdSetter(mobile))
+  }, [mobile])
 
   return (
     <div id={containerId}>

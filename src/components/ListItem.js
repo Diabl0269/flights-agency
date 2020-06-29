@@ -30,7 +30,6 @@ export default ({ record }) => {
       : 'onlyRoom'
     : 'onlyBreakfast'
 
-  console.log(commoditiesText)
   const TravelTimeContainer = ({ date, time, text }) => (
     <div id="travelTimeContainer">
       <Typography id="title">{`${d(text)}:`}</Typography>
@@ -42,7 +41,7 @@ export default ({ record }) => {
 
   return (
     <div id="listItemContainer">
-      <img src={image} alt="mock-resort-picture" />
+      <img src={image} alt="mock-resorts" />
 
       <div id="mainDataContainer">
         <div id="mainData">

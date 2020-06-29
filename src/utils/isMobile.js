@@ -1,2 +1,3 @@
 const { innerWidth } = window
-export default () => innerWidth < 1100
+const mobileSize = 1100
+export default (size) => size ? size < mobileSize : innerWidth < mobileSize

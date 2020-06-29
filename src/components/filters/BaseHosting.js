@@ -29,7 +29,7 @@ export default () => {
           />
           <Typography>{text}</Typography>
         </div>
-        <Typography id='lowestPriceText' >{lowestPrice}</Typography>
+        <Typography id="lowestPriceText">{`$${lowestPrice}`}</Typography>
       </div>
     )
   }

@@ -31,7 +31,14 @@ const RecordsProvider = (props) => {
 
   return (
     <RecordsContext.Provider
-      value={{ getRecordsData, recordsData, setQueryObj, alterQueryObj, queryObj }}
+      value={{
+        getRecordsData,
+        recordsData,
+        setQueryObj,
+        alterQueryObj,
+        queryObj,
+        mobile: props.mobile
+      }}
       {...props}
     />
   )

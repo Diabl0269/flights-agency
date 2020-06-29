@@ -32,7 +32,7 @@ export default () => {
     )
   }
 
-  const LowestPrice = () => <Typography>{lowestPrice}</Typography>
+  const LowestPrice = () => <Typography>{`$${lowestPrice}`}</Typography>
 
   return (
     <div id="filtersRatingContainer">
@@ -41,7 +41,7 @@ export default () => {
         {ratingsArray.map((rating, index) => (
           <div key={`${rating}${index}`} id="ratingContainer">
             <RadioButton rating={rating} />
-            <Rating readOnly value={rating} id='rating' />
+            <Rating readOnly value={rating} id="rating" />
             <LowestPrice />
           </div>
         ))}
